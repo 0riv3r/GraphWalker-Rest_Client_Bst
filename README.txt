@@ -18,11 +18,11 @@ $ mvn -B archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes  -Dgr
     # If required, make sure to use the correct java:
     $ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
     $ cd workspace/GraphWalker-rest_client/
-    $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/main/resources/com/cyberark/BstModel.json "random(edge_coverage(100))"
+    $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/test/resources/com/cyberark/BstModel.json "random(edge_coverage(100))"
     OR:
-    $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/main/resources/com/cyberark/BstModel.json "random(edge_coverage(100) && vertex_coverage(100))"
+    $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/test/resources/com/cyberark/BstModel.json "random(edge_coverage(100) && vertex_coverage(100))"
     OR:
-    $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/main/resources/com/cyberark/BstModel.json "random(time_duration(10))"
+    $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/test/resources/com/cyberark/BstModel.json "random(time_duration(10))"
 
 
 REST APIs:
@@ -59,11 +59,8 @@ $ http PUT  localhost:8887/graphwalker/restart
 Execute
 # If required, make sure to use the correct java:
 $ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-$ mvn clean compile exec:java -Dexec.mainClass="com.cyberark.BstTest"
+$ mvn clean compile test site jacoco:prepare-agent jacoco:report
 
-or:
-$ mvn clean
-$ mvn compile
-$ mvn exec:java -Dexec.mainClass="com.cyberark.BstTest"
+
 
 
