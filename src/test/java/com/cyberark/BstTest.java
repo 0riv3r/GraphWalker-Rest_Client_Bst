@@ -361,7 +361,7 @@ public class BstTest {
     // OR:
     // $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/test/resources/com/cyberark/BstModel.json "random(edge_coverage(100) && vertex_coverage(100))"
     // OR:
-    // $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/test/resources/com/cyberark/BstModel.json "random(time_duration(10))"
+    // $ java -jar ../lib/graphwalker-cli-4.2.0.jar -d all online -s RESTFUL -m src/test/resources/com/cyberark/BstModel.json "random(time_duration(30))"
 
     // in VS-Code run:
     // -----------------
